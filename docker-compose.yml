@@ -1,0 +1,13 @@
+services:
+    app:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: php83-alpine
+        container_name: php83
+        working_dir: /app
+        tty: true
+        ports:
+            - "8000:8080"
+        volumes:
+            - ./:/app
